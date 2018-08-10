@@ -1,0 +1,45 @@
+[
+    {
+        "id": "main",
+        "label": "Родительский алгоритм",
+        "token": "ALGORITHM"
+    },
+    {
+        "id": "blockStart",
+        "label": "Начало",
+        "token": "BLOCK",
+        "type": "START"
+    },
+    {
+        "id": "blockStart-block1",
+        "label": null,
+        "token": "PATH"
+    },
+    {
+        "id": "block1",
+        "label": "Условие",
+        "token": "BLOCK",
+        "type": "IF"
+    },
+    {
+        "id": "block1-block2",
+        "label": "Да",
+        "token": "PATH"
+    },
+    {
+        "id": "block1-block3",
+        "label": "Нет",
+        "token": "PATH"
+    },
+    {
+        "id": "block2",
+        "label": "Вычисляем тут чего-нибудь",
+        "token": "BLOCK",
+        "type": "SEQUENCE"
+    },
+    {
+        "id": "block2-block1",
+        "label": null,
+        "token": "PATH"
+    }
+]
