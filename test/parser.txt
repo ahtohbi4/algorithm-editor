@@ -1,0 +1,28 @@
+ALGORITHM: main { Родительский алгоритм }
+BLOCK:START: blockStart { Начало }
+    PATH: block1
+BLOCK:IF: block1 { Условие }
+    PATH: block2 { Да }
+    PATH: block3 { Нет }
+BLOCK:SEQUENCE: block2 { Вычисляем тут чего-нибудь }
+    PATH: block1
+BLOCK:INOUT: block3 { Введите чего-нть }
+    PATH: block4
+BLOCK:ALGORITHM: block4 { Под этим блоком спрятана подпрограмма }
+    SRC: sub
+    PATH: block5
+BLOCK:CYCLE: block5 { Какой-то полезный цикл с условием }
+    PATH: block6
+    PATH: block7
+BLOCK:SEQUENCE: block6 { Тело цикла }
+    PATH: block5
+BLOCK:INOUT: block7 { Выводим результат }
+    PATH: blockEnd
+BLOCK:END: blockEnd { Конец }
+
+ALGORITHM: sub { Дочерний алгоритм }
+BLOCK:START: { Начало }
+    PATH: block1
+BLOCK:SEQUENCE: block1 { Вычисляем тут чего-нибудь }
+    PATH: blockEnd
+BLOCK:END: blockEnd { Конец }
